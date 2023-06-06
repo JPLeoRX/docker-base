@@ -12,8 +12,8 @@ jobs:
     - name: Login into DockerHub
       run: echo ${{secrets.DOCKERHUB_TOKEN_RW}} | docker login -u ${{secrets.DOCKERHUB_USER}} --password-stdin
 
-    - name: Build Docker image for Base Python AI CPU locally
-      run: docker build . --file python-ai-cpu/Dockerfile --tag ${{secrets.DOCKERHUB_USER}}/base-python-ai:latest-cpu
+    - name: Build Docker image from branch "${{github.ref_name}}" for Base Python AI CPU
+      run: docker build . --file python-ai-cpu/Dockerfile --tag ${{secrets.DOCKERHUB_USER}}/base-python-ai:${{github.ref_name}}-cpu
 
-    - name: Push Docker image for Base Python AI CPU to DockerHub
-      run: docker push ${{secrets.DOCKERHUB_USER}}/base-python-ai:latest-cpu
+    - name: Push Docker image from branch "${{github.ref_name}}" for Base Python AI CPU to DockerHub
+      run: docker push ${{secrets.DOCKERHUB_USER}}/base-python-ai:${{github.ref_name}}-cpu
