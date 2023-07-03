@@ -5,7 +5,7 @@ FROM python:3.10
 RUN apt-get update
 RUN apt-get install ffmpeg libsm6 libxext6 libgl1 -y
 RUN apt-get install apt-utils software-properties-common -y
-RUN apt-get install iputils-ping nmap netcat -y
+RUN apt-get install iputils-ping nmap netcat-openbsd -y
 RUN apt-get install vim wget curl git -y
 
 # Common dependencies
