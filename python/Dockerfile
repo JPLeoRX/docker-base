@@ -25,6 +25,7 @@ RUN pip install pyzipcode==3.0.1
 RUN pip install google-cloud-bigquery==3.11.3
 RUN pip install openpyxl==3.0.10
 RUN pip install pika==1.3.2
+RUN pip install formulas==1.2.7
 
 # Our libraries
 RUN pip install simplestr==0.5.0
