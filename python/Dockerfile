@@ -28,6 +28,7 @@ RUN pip install pika==1.3.2
 RUN pip install formulas==1.2.7
 RUN pip install bcrypt==4.1.2
 RUN pip install python-jose[cryptography]==3.3.0
+RUN pip install exifread==3.0.0
 
 # Our libraries
 RUN pip install simplestr==0.5.0
