@@ -29,10 +29,11 @@ RUN pip install formulas==1.2.7
 RUN pip install bcrypt==4.1.2
 RUN pip install python-jose[cryptography]==3.3.0
 RUN pip install exifread==3.0.0
+RUN pip install pycryptodome==3.20.0
 
 # Our libraries
 RUN pip install simplestr==0.5.0
 RUN pip install omoide-cache==0.1.3
 RUN pip install tekleo-common-message-protocol==0.0.0.6
-RUN pip install tekleo-common-utils==0.0.2.6
+RUN pip install tekleo-common-utils==0.0.2.7
 RUN pip install tekleo-services-client==0.0.0.1
